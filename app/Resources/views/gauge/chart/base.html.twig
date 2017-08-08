@@ -52,7 +52,7 @@
                     color: '#707073'
                 },
                 minValue: 0
-                {% if useMax %},
+                {% if useMax is defined and useMax %},
                 viewWindowMode:'explicit',
                 viewWindow: {
                     max: {{ chartCisternCapacity }}
