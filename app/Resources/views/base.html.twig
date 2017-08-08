@@ -1,0 +1,48 @@
+{% trans_default_domain "base" %}
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="refresh" content="60; URL={{ app.request.uri }}">
+        <link rel="apple-touch-icon" sizes="57x57" href="{{ asset('asset/favicon/apple-icon-57x57.png') }}">
+        <link rel="apple-touch-icon" sizes="60x60" href="{{ asset('asset/favicon/apple-icon-60x60.png') }}">
+        <link rel="apple-touch-icon" sizes="72x72" href="{{ asset('asset/favicon/apple-icon-72x72.png') }}">
+        <link rel="apple-touch-icon" sizes="76x76" href="{{ asset('asset/favicon/apple-icon-76x76.png') }}">
+        <link rel="apple-touch-icon" sizes="114x114" href="{{ asset('asset/favicon/apple-icon-114x114.png') }}">
+        <link rel="apple-touch-icon" sizes="120x120" href="{{ asset('asset/favicon/apple-icon-120x120.png') }}">
+        <link rel="apple-touch-icon" sizes="144x144" href="{{ asset('asset/favicon/apple-icon-144x144.png') }}">
+        <link rel="apple-touch-icon" sizes="152x152" href="{{ asset('asset/favicon/apple-icon-152x152.png') }}">
+        <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('asset/favicon/apple-icon-180x180.png') }}">
+        <link rel="icon" type="image/png" sizes="192x192"  href="{{ asset('asset/favicon/android-icon-192x192.png') }}">
+        <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('asset/favicon/favicon-32x32.png') }}">
+        <link rel="icon" type="image/png" sizes="96x96" href="{{ asset('asset/favicon/favicon-96x96.png') }}">
+        <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('asset/favicon/favicon-16x16.png') }}">
+        <link rel="manifest" href="{{ asset('asset/favicon/manifest.json') }}">
+        <meta name="msapplication-TileColor" content="#ffffff">
+        <meta name="msapplication-TileImage" content="{{ asset('asset/favicon/ms-icon-144x144.png') }}">
+        <meta name="theme-color" content="#ffffff">
+
+        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+        <script type="text/javascript" src="{{ asset('asset/js/raphael-2.1.4.min.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('asset/js/justgage.js') }}"></script>
+
+        <title>{% block title %}{% trans %}Water gauge level{% endtrans %}{% endblock %}</title>
+        {% block stylesheets %}
+            <style>
+                .block {
+                    margin-bottom: 2px!important;
+                    background-color: #38383A;
+                }
+                .gauge {
+                    height: 280px;
+                }
+            </style>
+        {% endblock %}
+
+    </head>
+    <body>
+        {% block body %}{% endblock %}
+        {% block javascripts %}{% endblock %}
+    </body>
+</html>

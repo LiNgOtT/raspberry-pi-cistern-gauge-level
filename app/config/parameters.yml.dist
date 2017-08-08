@@ -1,0 +1,18 @@
+# This file is a "template" of what your parameters.yml file should look like
+# Set parameters here that may be different on each deployment target of the app, e.g. development, staging, production.
+# https://symfony.com/doc/current/best_practices/configuration.html#infrastructure-related-configuration
+parameters:
+    secret: ThisTokenIsNotSoSecretChangeIt
+
+    # weather api data
+    weather_api.use: true
+    weather_api.url: http://api.openweathermap.org/data/2.5/forecast
+    weather_api.appId: YOUR HASH
+    weather_api.city: Cologne,de
+
+    # charts config
+    chart.limit.all: 500
+    chart.limit.day: 15
+    chart.limit.week: 10
+    chart.limit.month: 12
+    chart.cistern.capacity: 8000

@@ -1,0 +1,94 @@
+{% trans_default_domain "base" %}
+
+<div id="containerWeather" class="block" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+
+<script>
+    google.charts.load('current', {'packages':['corechart']});
+    google.charts.setOnLoadCallback(drawVisualization);
+
+    function drawVisualization() {
+        // Some raw data (not necessarily accurate)
+        var data = google.visualization.arrayToDataTable([
+            ['Month', '{% trans %}Temperature{% endtrans %}', '{% trans %}Rainfall{% endtrans %}', {role: 'style'}],
+            {% for key,label in weather.hour %}
+            [
+                '{{ label }}',
+                {{ weather.temp[key] }},
+                {{ weather.rain[key] }},
+                'stroke-color: white; stroke-width: 1'
+            ]{% if loop.last == false %},{% endif %}
+            {% endfor %}
+        ]);
+
+        var options = {
+            title: '{% trans %}Forecast: Rain and temperature{% endtrans %}',
+            titleTextStyle: {
+                color: '{{ style.title.color }}',
+                fontSize: {{ style.title.fontSize }}
+            },
+            vAxis: {
+                title: '{% trans %}Temperature (°C){% endtrans %}',
+                titleTextStyle: {
+                    color: '{{ style.axisTitle.color }}',
+                    fontSize: {{ style.axisTitle.fontSize }}
+                },
+                textStyle: {
+                    color: '{{ style.text.color }}',
+                    fontSize: {{ style.text.fontSize }}
+                }
+            },
+            vAxes: [
+                {},
+                {
+                    title: '{% trans %}Rainfall (mm){% endtrans %}'
+                }
+            ],
+            annotations: {
+                textStyle: {
+                    color: '{{ style.text.color }}',
+                    fontSize: {{ style.text.fontSize }}
+                }
+            },
+            legend: {
+                textStyle: {
+                    color: '{{ style.legend.color }}',
+                    fontSize: {{ style.legend.fontSize }}
+                }
+            },
+            backgroundColor: {
+                fill: '#38383A'
+            },
+            hAxis: {
+                title: '',
+                textStyle: {
+                    color: '{{ style.text.color }}',
+                    fontSize: {{ style.text.fontSize }}
+                },
+                logScale: true
+            },
+            seriesType: 'bars',
+            series: {
+                0: {
+                    type: 'line',
+                    pointSize: 6,
+                    targetAxisIndex: 0
+                },
+                1: {
+                    targetAxisIndex: 1
+                }
+            },
+            {% if showAnimation and noAnimation == false %}
+            animation: {
+                duration: {{ style.animation.duration }},
+                easing: 'linear',
+                startup: {{ style.animation.startup }}
+            },
+            {% endif %}
+            colors: ['#91EE7E', '#44A9A8'],
+            baselineColor: '#CCCCCC'
+        };
+
+        var chart = new google.visualization.ComboChart(document.getElementById('containerWeather'));
+        chart.draw(data, options);
+    }
+</script>

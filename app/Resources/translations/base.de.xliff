@@ -1,0 +1,67 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file source-language="en" datatype="plaintext" original="file.ext">
+        <body>
+            <trans-unit id="page.title">
+                <source>Water gauge level</source>
+                    <target>Wasserstand Zisterne</target>
+            </trans-unit>
+            <trans-unit id="weather.title">
+                <source>Forecast: Rain and temperature</source>
+                <target>Vorhersage: Niederschlag und Temperatur</target>
+            </trans-unit>
+            <trans-unit id="weather.legendTemperature">
+                <source>Temperature</source>
+                <target>Temperatur</target>
+            </trans-unit>
+            <trans-unit id="weather.legendRainfall">
+                <source>Rainfall</source>
+                <target>Niederschlag</target>
+            </trans-unit>
+            <trans-unit id="weather.vAxisTitleLeft">
+                <source>Temperature (°C)</source>
+                <target>Temperatur (°C)</target>
+            </trans-unit>
+            <trans-unit id="weather.vAxisTitleRight">
+                <source>Rainfall (mm)</source>
+                <target>Niederschlag (mm)</target>
+            </trans-unit>
+            <trans-unit id="gauge.title">
+                <source>Level</source>
+                <target>Pegel</target>
+            </trans-unit>
+            <trans-unit id="graph.legend.rainwater">
+                <source>Rainwater</source>
+                <target>Regenwasser</target>
+            </trans-unit>
+            <trans-unit id="graph.all.title">
+                <source>All measurements</source>
+                <target>Alle Messungen</target>
+            </trans-unit>
+            <trans-unit id="graph.cunsumptionPerDay.title">
+                <source>In and Out per day</source>
+                <target>Verbrauch pro Tag</target>
+            </trans-unit>
+            <trans-unit id="graph.daily.title">
+                <source>Level per day</source>
+                <target>Stand pro Tag</target>
+            </trans-unit>
+            <trans-unit id="graph.weekly.title">
+                <source>Level per week</source>
+                <target>Stand pro Woche</target>
+            </trans-unit>
+            <trans-unit id="graph.monthly.title">
+                <source>Level per month</source>
+                <target>Stand pro Monat</target>
+            </trans-unit>
+            <trans-unit id="graph.unit.liter">
+                <source>Liter</source>
+                <target>Liter</target>
+            </trans-unit>
+            <trans-unit id="graph.rainwater">
+                <source>Rainwater (liter)</source>
+                <target>Regenwasser (Liter)</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

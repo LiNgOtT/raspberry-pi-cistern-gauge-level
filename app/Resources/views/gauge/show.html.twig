@@ -1,0 +1,85 @@
+{% trans_default_domain "base" %}
+
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+    {% include 'gauge/chart/gauge.html.twig' with {
+        'label': raspberry.all.label|last,
+        'data': raspberry.all.data|last
+    } %}
+
+    {% include 'gauge/chart/base.html.twig' with {
+        'containerId': 'container-day-consumption',
+        'title': 'In and Out per day'|trans,
+        'max': null,
+        'showAnnotation': true,
+        'showAnimation': true,
+        'showStroke': false,
+        'barColor': '#5FC038',
+        'useMax': false,
+        'data': {
+            'label': raspberry.dayConsumption.label,
+            'data': raspberry.dayConsumption.data
+        }
+    } %}
+
+    {% if useWeather %}
+        {% include 'gauge/chart/weather.html.twig' with {
+            'showAnimation': false
+        } %}
+    {% endif %}
+
+    {% include 'gauge/chart/base.html.twig' with {
+        'containerId': 'container-day',
+        'title': 'Level per day'|trans,
+        'showAnnotation': true,
+        'showAnimation': true,
+        'showStroke': true,
+        'barColor': '#44A9A8',
+        'data': {
+            'label': raspberry.day.label,
+            'data': raspberry.day.data
+        }
+    } %}
+
+    {% include 'gauge/chart/base.html.twig' with {
+        'containerId': 'container-week',
+        'title': 'Level per week'|trans,
+        'showAnnotation': true,
+        'showAnimation': true,
+        'showStroke': true,
+        'barColor': '#44A9A8',
+        'data': {
+            'label': raspberry.week.label,
+            'data': raspberry.week.data
+        }
+    } %}
+
+    {% include 'gauge/chart/base.html.twig' with {
+        'containerId': 'container-month',
+        'title': 'Level per month'|trans,
+        'showAnnotation': true,
+        'showAnimation': true,
+        'showStroke': true,
+        'barColor': '#44A9A8',
+        'data': {
+            'label': raspberry.month.label,
+            'data': raspberry.month.data
+        }
+    } %}
+
+    {% include 'gauge/chart/base.html.twig' with {
+        'containerId': 'container-all',
+        'title':'All measurements'|trans,
+        'showAnnotation': false,
+        'showAnimation': true,
+        'showStroke': true,
+        'barColor': '#44A9A8',
+        'data': {
+            'label': raspberry.all.label,
+            'data': raspberry.all.data
+        }
+    } %}
+
+{% endblock %}

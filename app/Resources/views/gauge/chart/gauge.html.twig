@@ -1,0 +1,19 @@
+{% trans_default_domain "base" %}
+
+<div id="gauge" class="block gauge"></div>
+
+<script>
+
+    var g = new JustGage({
+        id: "gauge",
+        value: {{ data }},
+        min: 0,
+        max: {{ chartCisternCapacity }},
+        valueFontColor: '{{ style.axisTitle.color }}',
+        labelFontColor: '{{ style.axisTitle.color }}',
+        labelMinFontSize: {{ style.title.fontSize }},
+        levelColors: ["#DF5353", "#DDDF0D", "#55BF3B"],
+        startAnimationTime: 4000,
+        title: "{% trans %}Level{% endtrans %} ({{ label }})"
+    });
+</script>
