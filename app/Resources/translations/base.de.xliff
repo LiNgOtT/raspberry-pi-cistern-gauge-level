@@ -30,10 +30,6 @@
                 <source>Level</source>
                 <target>Pegel</target>
             </trans-unit>
-            <trans-unit id="graph.legend.rainwater">
-                <source>Rainwater</source>
-                <target>Regenwasser</target>
-            </trans-unit>
             <trans-unit id="graph.all.title">
                 <source>All measurements</source>
                 <target>Alle Messungen</target>
