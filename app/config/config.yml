@@ -8,6 +8,19 @@ imports:
 parameters:
     locale: en
 
+    # weather api
+    weather_api.use: false
+    weather_api.url: http://api.openweathermap.org/data/2.5/forecast
+    weather_api.appId:
+    weather_api.city: Cologne,de
+
+    # configuration for Google Charts
+    chart.limit.all: 500
+    chart.limit.day: 15
+    chart.limit.week: 10
+    chart.limit.month: 12
+    chart.cistern.capacity: 8000
+
 framework:
     #esi: ~
     translator: { fallbacks: ['%locale%'] }

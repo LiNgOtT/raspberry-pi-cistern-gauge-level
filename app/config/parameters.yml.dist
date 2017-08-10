@@ -5,14 +5,14 @@ parameters:
     secret: ThisTokenIsNotSoSecretChangeIt
 
     # weather api data
-    weather_api.use: true
-    weather_api.url: http://api.openweathermap.org/data/2.5/forecast
-    weather_api.appId: YOUR HASH
-    weather_api.city: Cologne,de
+    weather_api.use: '%weather_api.use%'
+    weather_api.url: '%weather_api.url%'
+    weather_api.appId: '%weather_api.appId%'
+    weather_api.city: '%weather_api.city%'
 
     # charts config
-    chart.limit.all: 500
-    chart.limit.day: 15
-    chart.limit.week: 10
-    chart.limit.month: 12
-    chart.cistern.capacity: 8000
+    chart.limit.all: '%chart.limit.all%'
+    chart.limit.day: '%chart.limit.day%'
+    chart.limit.week: '%chart.limit.week%'
+    chart.limit.month: '%chart.limit.month%'
+    chart.cistern.capacity: '%chart.cistern.capacity%'
