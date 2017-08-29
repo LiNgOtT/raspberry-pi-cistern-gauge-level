@@ -104,6 +104,7 @@ class RaspberryData
      */
     protected function postProcess() {
         // calculate consumption: day
+
         $this->data['dayConsumption'] = array( 'label' => array(), 'data' => array());
         foreach($this->data['day']['data'] as $key => $value)
         {
@@ -121,8 +122,11 @@ class RaspberryData
 
         // get slice of data
         foreach($this->groupList as $index) {
-            $this->data[$index]['label'] = array_slice($this->data[$index]['label'],count($this->data[$index]['label'])-$this->parameter['limit.'.$index]);
-            $this->data[$index]['data'] = array_slice($this->data[$index]['data'],count($this->data[$index]['data'])-$this->parameter['limit.'.$index]);
+            // only slice if data is more than limit
+            if(count($this->data[$index]['label']) > $this->parameter['limit.'.$index]) {
+                $this->data[$index]['label'] = array_slice($this->data[$index]['label'],count($this->data[$index]['label'])-$this->parameter['limit.'.$index]);
+                $this->data[$index]['data'] = array_slice($this->data[$index]['data'],count($this->data[$index]['data'])-$this->parameter['limit.'.$index]);
+            }
         }
     }
 

@@ -15,7 +15,7 @@ parameters:
     weather_api.city: Cologne,de
 
     # configuration for Google Charts
-    chart.limit.all: 500
+    chart.limit.all: 50
     chart.limit.day: 15
     chart.limit.week: 10
     chart.limit.month: 12
