@@ -83,7 +83,7 @@ for i in range(0,scan_runs):
                 pass
         ende = time.time();
 
-        scan_distance=((ende - start) * 34300) / 2
+        scan_distance=((ende - start) * 27600) / 2
         print scan_distance
         scan_distance_total=scan_distance_total+scan_distance
         time.sleep(0.75)
