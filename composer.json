@@ -20,7 +20,7 @@
         ]
     },
     "require": {
-        "php": ">=5.5.9",
+        "php": ">=5.5.9 <7",
         "curl/curl": "^1.7",
         "incenteev/composer-parameter-handler": "^2.0",
         "league/csv": "^8.2",
