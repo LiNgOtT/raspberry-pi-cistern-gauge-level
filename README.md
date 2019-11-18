@@ -5,6 +5,11 @@ You can see the current water gauge, all historical data
 since using this project, some grouped data and consumption per day.
 Additionally, you can setup your location to get your local weather data.
 
+## Releases
+
+- 2.0 Dockerize
+- 1.2 via Apache / PHP
+
 ## Features
 
 All charts are visualized with the JS framework of [Google Charts](https://developers.google.com/chart/) and [JustGauge](http://justgage.com/).
@@ -17,7 +22,7 @@ All charts are visualized with the JS framework of [Google Charts](https://devel
 
 Check out my live example: [http://raspberry.andreaslingott.de](http://raspberry.andreaslingott.de/) for english and [http://raspberry.andreaslingott.de/de](http://raspberry.andreaslingott.de/de/) for german version.
 
-![Frontend](docs/img/raspberry-pi-frontend.png)
+![Frontend](code/docs/img/raspberry-pi-frontend.png)
 
 # Requirements
 
@@ -36,13 +41,13 @@ Before you can start, you need to buy some equipment.
 - [Junction box](https://www.amazon.de/Spelsberg-Abzweigdose-Mini-25-31090801/dp/B000UW5FLW/ref=as_li_ss_tl?ie=UTF8&qid=1501701150&sr=8-18&keywords=verbindungsdose&linkCode=ll1&tag=andrblog-21&linkId=00b928948c642e643d4713cab7ed16d4)
 - [Jumper Cable](https://www.amazon.de/Aukru-jumper-wire-Steckbr%C3%BCcken-Drahtbr%C3%BCcken/dp/B00MWMEIF2/ref=as_li_ss_tl?ie=UTF8&qid=1501701409&sr=8-1&keywords=jumper+kabel+male+female&linkCode=ll1&tag=andrblog-21&linkId=fe54b88fbb1a0872d65caa5de9eea74d)
 
-![Raspberry Pi 3 Model B](docs/img/raspberry.jpg)
-![Ultrasonic Sensor Modul HC-SR04 Distance Sensor](docs/img/ultrasonic.jpg)
-![Power Supply](docs/img/power.jpg)
+![Raspberry Pi 3 Model B](code/docs/img/raspberry.jpg)
+![Ultrasonic Sensor Modul HC-SR04 Distance Sensor](code/docs/img/ultrasonic.jpg)
+![Power Supply](code/docs/img/power.jpg)
 
-![Water Resistence Box](docs/img/box.jpg)
-![Junction box](docs/img/junctionbox.jpg)
-![Jumper cable](docs/img/jumpercable.jpg)
+![Water Resistence Box](code/docs/img/box.jpg)
+![Junction box](code/docs/img/junctionbox.jpg)
+![Jumper cable](code/docs/img/jumpercable.jpg)
 
 ## Installing
 
@@ -59,13 +64,13 @@ I have used PIN 11 (trigger) and PIN 13 (echo) on the Raspberry Pi for wirering 
 Make sure that no water can get into the case of the Ultrasonic Sensor and the Raspberry Pi. I have used a [Water Resistence Box](https://www.amazon.de/gp/product/B00A0J1TJW/ref=as_li_tl?ie=UTF8&camp=1638&creative=6742&creativeASIN=B00A0J1TJW&linkCode=as2&tag=andrblog-21&linkId=3ed7559fa7ebd3af453ce37ffadcb240) and a [Junction Box](https://www.amazon.de/Spelsberg-Abzweigdose-Mini-25-31090801/dp/B000UW5FLW/ref=as_li_ss_tl?ie=UTF8&qid=1501701150&sr=8-18&keywords=verbindungsdose&linkCode=ll1&tag=andrblog-21&linkId=00b928948c642e643d4713cab7ed16d4) which works very well.
 
 
-![Raspberry with Ultra Sonic Sensor](docs/img/raspberry-pi-final5.jpg)
-![Raspberry with Ultra Sonic Sensor](docs/img/raspberry-pi-final3.jpg)
+![Raspberry with Ultra Sonic Sensor](code/docs/img/raspberry-pi-final5.jpg)
+![Raspberry with Ultra Sonic Sensor](code/docs/img/raspberry-pi-final3.jpg)
 
-![Raspberry with Ultra Sonic Sensor](docs/img/raspberry-pi-final6.jpg)
+![Raspberry with Ultra Sonic Sensor](code/docs/img/raspberry-pi-final6.jpg)
 
-![Raspberry with Ultra Sonic Sensor](docs/img/raspberry-pi-final4.jpg)
-![Raspberry with Ultra Sonic Sensor](docs/img/raspberry-pi-final2.jpg)
+![Raspberry with Ultra Sonic Sensor](code/docs/img/raspberry-pi-final4.jpg)
+![Raspberry with Ultra Sonic Sensor](code/docs/img/raspberry-pi-final2.jpg)
 
 #### Software
 
