@@ -1,6 +1,6 @@
 # This file is auto-generated during the composer install
 parameters:
-  secret: '3msjsadjsdjfkjsdkfj&&%%$424ggsg'
+  secret: 'ThisTokenIsNotSoSecretChangeIt'
   weather_api.use: '%weather_api.use%'
   weather_api.url: '%weather_api.url%'
   weather_api.appId: '%weather_api.appId%'
