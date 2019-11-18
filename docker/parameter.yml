@@ -1,0 +1,12 @@
+# This file is auto-generated during the composer install
+parameters:
+  secret: 'ThisTokenIsNotSoSecretChangeIt'
+  weather_api.use: '%weather_api.use%'
+  weather_api.url: '%weather_api.url%'
+  weather_api.appId: '%weather_api.appId%'
+  weather_api.city: '%weather_api.city%'
+  chart.limit.all: '%chart.limit.all%'
+  chart.limit.day: '%chart.limit.day%'
+  chart.limit.week: '%chart.limit.week%'
+  chart.limit.month: '%chart.limit.month%'
+  chart.cistern.capacity: '%chart.cistern.capacity%'

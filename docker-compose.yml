@@ -1,0 +1,26 @@
+version: '3.7'
+
+services:
+  http:
+    build:
+      context: ./
+      dockerfile: Dockerfile-http
+    ports:
+      - "8080:80"
+    restart: always
+    #volumes:
+      # dev
+      #- ./code:/code
+      #- ./docker/nginx.conf:/etc/nginx/conf.d/site.conf
+    links:
+      - php
+  php:
+    build:
+      context: ./
+      dockerfile: Dockerfile-php
+    restart: always
+    volumes:
+      # dev
+      #- ./code:/code
+      #- ./docker/php.ini:/usr/local/etc/php/conf.d/custom.ini
+      - ./docker/parameter.yml:/code/app/config/parameter.yml

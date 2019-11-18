@@ -21,7 +21,7 @@ Check out my live example: [http://raspberry.andreaslingott.de](http://raspberry
 
 # Requirements
 
-In general, you only need all equipment from the shopping list and a web server ([Apache](https://httpd.apache.org/) w/ [PHP](http://php.net/manual/en/intro-whatis.php)). The web server can be installed on a separate machine or directly on the Raspberry Pi.
+In general, you only need all equipment from the shopping list and a server running [Docker Compose](https://docs.docker.com/compose/).
 
 If you want to use an external machine as web server, you need to set up a [FTP server](https://en.wikipedia.org/wiki/File_Transfer_Protocol) as well to upload the CSV data file to.
 A much better way is to use [RSYNC](https://en.wikipedia.org/wiki/Rsync).
@@ -73,19 +73,14 @@ Make sure that no water can get into the case of the Ultrasonic Sensor and the R
 
 First of all install the OS [Raspbian](https://www.raspberrypi.org/downloads/raspbian/) to your Raspberry Pi and decide how to connect your Raspberry Pi to your network. The easiest way is to use an ethernet cable or you can set up [Wifi](https://www.raspberrypi.org/documentation/configuration/wireless/wireless-cli.md)  which is more comfortable regarding not to lay an extra cable.
 
-##### Setup web server and project
+##### Setup web server
 
-You need to decide whether to install the web server on your Raspberry Pi or on a separate machine. The steps for installation are the same.
+Checkout this repository to your web server.
+Start your docker container with `docker-compose up`
 
-	sudo apt-get install apache2 php5
-	sudo a2enmod rewrite
-	
-After that go to your web root and checkout the project and execute Composer ([getcomposer.org](https://getcomposer.org/download/)) to install the Symfony project.
-	
-	git clone https://github.com/LiNgOtT/raspberry-pi-cistern-gauge-level.git
-	composer update
+##### Setup raspberry pi 
 
-If you decided to install the web server on a separate machine, you need to set up a FTP Server ([vsftp](https://en.wikipedia.org/wiki/Vsftpd)) or set up a ssh user to sync via [RSYNC](https://en.wikipedia.org/wiki/Rsync).
+Checkout this repository to your raspberry pi.
 
 Schedule the Python script ([bin/scan.py](bin/scan.py)) in the crontab `0,30 * * * * /usr/bin/perl PATH_TO/bin/scan.py` which will scan the water gauge level every 30 minutes.
 
@@ -108,7 +103,7 @@ I'm far from being an expert and suspect there are many ways to improve – if y
 - [Google Charts](https://developers.google.com/chart/)
 - [JustGauge](http://justgage.com/)
 - [openweathermap.org](https://openweathermap.org)
-- [Apache](https://httpd.apache.org/)
+- [NGINX](https://www.nginx.com/)
 - [PHP](http://php.net/manual/en/intro-whatis.php)
 - [Symfony](http://symfony.com/)
 - [vsftp](https://en.wikipedia.org/wiki/Vsftpd)
