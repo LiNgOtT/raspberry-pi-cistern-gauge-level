@@ -20,7 +20,7 @@ All charts are visualized with the JS framework of [Google Charts](https://devel
 - consumption per day
 - water gauge level per day, week and month
 
-Check out my live example: [http://raspberry.andreaslingott.de](http://raspberry.andreaslingott.de/) for english and [http://raspberry.andreaslingott.de/de](http://raspberry.andreaslingott.de/de/) for german version.
+Check out my live example: [http://andreaslingott.de:8080](http://andreaslingott.de:8080/) for english and [http://andreaslingott.de:8080/de](http://andreaslingott.de:8080/de/) for german version.
 
 ![Frontend](code/docs/img/raspberry-pi-frontend.png)
 
