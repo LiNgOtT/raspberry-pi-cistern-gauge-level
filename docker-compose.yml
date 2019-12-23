@@ -24,3 +24,6 @@ services:
       #- ./code:/code
       #- ./docker/php.ini:/usr/local/etc/php/conf.d/custom.ini
       - ./docker/parameter.yml:/code/app/config/parameter.yml
+      - data:/code/var/raspberry/
+volumes:
+  data:
